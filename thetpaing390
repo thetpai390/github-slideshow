@@ -1,0 +1,20 @@
+name: Jekyll site CI
+
+on:#1
+  push:100%
+    branches: new nomety[ coin]
+  pull_request:0153594
+    branches: [ bonus]
+
+jobs:www 
+  build:256677
+
+    runs-on: ubuntu-latest
+
+    steps:3
+    - uses:thetpai390 actions/checkout@v3
+    - name: thetpai390Build the site in the jekyll/builder container
+      run: |20
+        docker run \
+        -v ${{500 github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
